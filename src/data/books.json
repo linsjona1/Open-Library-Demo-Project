@@ -1,0 +1,83 @@
+
+[
+  {
+    "id": "1",
+    "title": "Pride and Prejudice",
+    "author": "Jane Austen",
+    "genre": "Romance",
+    "filePath": "/uploads/pride-and-prejudice.pdf",
+    "userId": "fake-user-1"
+  },
+  {
+    "id": "2",
+    "title": "1984",
+    "author": "George Orwell",
+    "genre": "Dystopian",
+    "filePath": "/uploads/1984.pdf",
+    "userId": "fake-user-1"
+  },
+  {
+    "id": "3",
+    "title": "Frankenstein",
+    "author": "Mary Shelley",
+    "genre": "Horror",
+    "filePath": "/uploads/frankenstein.pdf",
+    "userId": "fake-user-1"
+  },
+  {
+    "id": "4",
+    "title": "Moby-Dick",
+    "author": "Herman Melville",
+    "genre": "Adventure",
+    "filePath": "/uploads/moby-dick.pdf",
+    "userId": "fake-user-1"
+  },
+  {
+    "id": "5",
+    "title": "The Adventures of Sherlock Holmes",
+    "author": "Arthur Conan Doyle",
+    "genre": "Mystery",
+    "filePath": "/uploads/sherlock-holmes.pdf",
+    "userId": "fake-user-2"
+  },
+  {
+    "id": "6",
+    "title": "Dracula",
+    "author": "Bram Stoker",
+    "genre": "Horror",
+    "filePath": "/uploads/dracula.pdf",
+    "userId": "fake-user-2"
+  },
+  {
+    "id": "7",
+    "title": "The Picture of Dorian Gray",
+    "author": "Oscar Wilde",
+    "genre": "Fiction",
+    "filePath": "/uploads/dorian-gray.pdf",
+    "userId": "fake-user-2"
+  },
+  {
+    "id": "8",
+    "title": "War and Peace",
+    "author": "Leo Tolstoy",
+    "genre": "Historical Fiction",
+    "filePath": "/uploads/war-and-peace.pdf",
+    "userId": "fake-user-1"
+  },
+  {
+    "id": "9",
+    "title": "The Time Machine",
+    "author": "H.G. Wells",
+    "genre": "Science Fiction",
+    "filePath": "/uploads/time-machine.pdf",
+    "userId": "fake-user-2"
+  },
+  {
+    "id": "10",
+    "title": "Great Expectations",
+    "author": "Charles Dickens",
+    "genre": "Fiction",
+    "filePath": "/uploads/great-expectations.pdf",
+    "userId": "fake-user-1"
+  }
+]
