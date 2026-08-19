@@ -7,6 +7,5 @@ Also line 8
 
 For best practice , don't change server.ts name in src, write your routers in th Router folder and uncomment the commented lines in sever.ts
 
-Also for fast setupx just go to package.json file press ctl h and replae middleware with your folder name.
 
 optionally, you can change your port number in .env file.
