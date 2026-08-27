@@ -2,17 +2,9 @@
   {
     "id": "2",
     "title": "The Hobbit2",
-    "author": "Lunus Nathan",
+    "author": "Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-user-1"
-  },
-  {
-    "id": "3",
-    "title": "Frankenstein",
-    "author": "Mary Shelley",
-    "genre": "Horror",
-    "filePath": "/uploads/frankenstein.pdf",
     "userId": "fake-user-1"
   },
   {
@@ -203,6 +195,30 @@
     "id": "4d328096-8d1d-4c31-a3c9-1b0ff973ff6c",
     "title": "The Hobbit2",
     "author": "Lunus Nathan",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "fake-userID"
+  },
+  {
+    "id": "b04be6eb-5fbb-4b1d-895f-e0fad9fae29d",
+    "title": "The Hobbit2",
+    "author": "Lunus",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "fake-userID"
+  },
+  {
+    "id": "51910c0a-dd94-4fb7-9ba8-4dde5658f90e",
+    "title": "The Hobbit2",
+    "author": "Linus",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "fake-userID"
+  },
+  {
+    "id": "38ec30c3-3098-48a1-9277-fc1950228e95",
+    "title": "The Hobbit2",
+    "author": "linux",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
     "userId": "fake-userID"

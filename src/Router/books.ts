@@ -13,7 +13,7 @@ const userID = 'fake-userID'
 // Adding a new book
 router.post("/", async (req, res) => {
   try {
-    const { title, author, genre, filePath } = req.body;
+    const { title, author, genre, filePath, id} = req.body;
 
     if (!title || !author || !filePath) {
       return res.status(400).json({ message: "title, author, and filePath are required" });
@@ -30,7 +30,6 @@ router.post("/", async (req, res) => {
 
     const books = await readFile(bookFilePath);
 
-    console.log(books)
     books.push(newBook);
     
     await writeFile(bookFilePath, books);
