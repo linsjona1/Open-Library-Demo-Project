@@ -1,5 +1,9 @@
 {
+<<<<<<< HEAD
   "name": "Personal-Library Project",
+=======
+  "name": "Library-Project",
+>>>>>>> temp-branch
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
