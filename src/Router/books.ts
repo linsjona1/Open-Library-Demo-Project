@@ -2,6 +2,8 @@ import { Router } from "express";
 import crypto from "crypto";
 import { readFile, writeFile } from "../utils/helper";
 import { Book } from "../types";
+import { createBookSchema } from "../schemas/bookSchema";
+import { updateBookSchema } from "../schemas/bookSchema";
 
 
 const router = Router();
@@ -13,11 +15,16 @@ const userID = 'fake-userID'
 // Adding a new book
 router.post("/", async (req, res) => {
   try {
-    const { title, author, genre, filePath, id} = req.body;
 
-    if (!title || !author || !filePath) {
-      return res.status(400).json({ message: "title, author, and filePath are required" });
-    }
+     const result = createBookSchema.safeParse(req.body);
+     if (!result.success) {
+      return res.status(400).json({ message: "Invalid book data", errors: result.error.issues });
+     }
+    const { title, author, genre, filePath } = result.data;
+
+    // if (!title || !author || !filePath) {
+    //   return res.status(400).json({ message: "title, author, and filePath are required" });
+    // }
 
     const newBook: Book = {
       id: crypto.randomUUID(),
@@ -57,8 +64,14 @@ router.get("/", async (req, res) => {
 router.get("/:id", async (req, res) => {
   try {
     const { id } = req.params;
+    
     const books = await readFile(bookFilePath);
     const theBook= books.find((b: Book) => b.id === id);  // How to find
+    // console.log(theBook);
+        
+    
+    
+    
 
     if (!theBook) {
       return res.status(404).json({ message: "Book not found" });
@@ -75,7 +88,13 @@ router.get("/:id", async (req, res) => {
 router.put("/:id", async (req, res) => {
   try {
     const { id } = req.params;
-    const { title, author, genre, filePath } = req.body;
+    const result = updateBookSchema.safeParse(req.body);
+
+    if (!result.success) {
+      return res.status(400).json({ message: "Invalid book data", errors: result.error.issues });
+    }
+    const { title, author, genre, filePath} = result.data;
+    // const bookId = req.body.id;
 
     const books = await readFile(bookFilePath);
     const index = books.findIndex((b: Book) => b.id === id);
@@ -88,7 +107,9 @@ router.put("/:id", async (req, res) => {
       ...books[index],
 
     //   nullish coalescing operator
+
       title: title ?? books[index].title,
+      id: id ?? books[index].id,
       author: author ?? books[index].author,
       genre: genre ?? books[index].genre,
       filePath: filePath ?? books[index].filePath,
@@ -113,6 +134,10 @@ router.delete("/:id", async (req, res) => {
     if (!bookExists) {
       return res.status(404).json({ message: "Book not found" });
     }
+    //  if (id.length === 0){
+    //   return res.status(400).json({message : "please input a valid id"})
+    // }
+    
 
     const updatedBooks = books.filter((b: Book) => b.id !== id);
     await writeFile(bookFilePath, updatedBooks);

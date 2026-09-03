@@ -24,14 +24,6 @@
     "userId": "fake-user-2"
   },
   {
-    "id": "6",
-    "title": "Dracula",
-    "author": "Bram Stoker",
-    "genre": "Horror",
-    "filePath": "/uploads/dracula.pdf",
-    "userId": "fake-user-2"
-  },
-  {
     "id": "7",
     "title": "The Picture of Dorian Gray",
     "author": "Oscar Wilde",
@@ -59,17 +51,9 @@
     "id": "10",
     "title": "Great Expectations",
     "author": "Charles Dickens",
-    "genre": "Fiction",
+    "genre": "Sci-Fi Classic",
     "filePath": "/uploads/great-expectations.pdf",
     "userId": "fake-user-1"
-  },
-  {
-    "id": "2c44a85c-fe2b-4e92-8a99-aa61157fd325",
-    "title": "The Hobbit",
-    "author": "J.R.R. Tolkien",
-    "genre": "Fantasy",
-    "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
   },
   {
     "id": "436aa219-ff16-4465-a078-7338c33e8709",
@@ -89,14 +73,6 @@
   },
   {
     "id": "81338bb0-177c-498c-9d64-3e7a007feb95",
-    "title": "The Hobbit2",
-    "author": "Lunus Nathan",
-    "genre": "Fantasy",
-    "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
-  },
-  {
-    "id": "d3937c13-edb0-42ee-8e59-13af55127670",
     "title": "The Hobbit2",
     "author": "Lunus Nathan",
     "genre": "Fantasy",
@@ -221,6 +197,28 @@
     "author": "linux",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
+    "userId": "fake-userID"
+  },
+  {
+    "id": "6",
+    "title": "The Hobbit2",
+    "author": "jonathan",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "fake-userID"
+  },
+  {
+    "id": "be378920-0499-4f7d-b119-bf450d919525",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "filePath": "/uploads/dune.pdf",
+    "userId": "fake-userID"
+  },
+  {
+    "id": "b871cdab-33d5-4d22-96ed-3f870a4d7238",
+    "title": "Dune",
+    "author": "Frank Herbert",
+    "filePath": "/uploads/dune.pdf",
     "userId": "fake-userID"
   }
 ]

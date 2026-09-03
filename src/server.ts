@@ -13,10 +13,14 @@ app.use(express.json());
 
 app.use("/books", booksRouter);
 
-// Sserver Health
+// Server Health
 app.get('/health', (req, res) => {
     res.json({ status: 'ok', timestamp: new Date().toISOString() });
 });
+// HomePage
+app.get('/', (req, res)=>{
+  res.status(200).send('<h1> Welcome </h1>')
+})
 
 // admin routh
 app.use('/admin', adminMiddleware)
