@@ -1,0 +1,17 @@
+[
+  {
+    "id": "6a8d548f-19da-4668-9bba-f8f7a00af3f2",
+    "email": "jonathan@example.com",
+    "passwordHash": "$2b$10$0bpT74EWImwkdWghYBveReMmpSBTSuNptn8xZlOogDEC6FjyKOLsi"
+  },
+  {
+    "id": "e8e00a7b-d263-484b-973d-c644d6a647ae",
+    "email": "linusjona@gmail.com",
+    "passwordHash": "$2b$10$5QyN41YyNMd/88qyNwG1ceeulPK62M0asMPiYpb29HXcsexuaZOGK"
+  },
+  {
+    "id": "b7fbeacb-e8e2-4bda-b440-5495dbff5f5b",
+    "email": "jonathanehione@gmail.com",
+    "passwordHash": "$2b$10$2ZIy.b0n2aDzDklXg33Rpu9B/CnuPsEMHVFHiSZ9jCaWAu1kGDxLi"
+  }
+]

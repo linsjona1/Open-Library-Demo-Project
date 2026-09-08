@@ -1,5 +1,7 @@
 import express from "express";
 import  booksRouter from './Router/books'
+import authRouter from "./Router/auth";
+
 import dotenv from "dotenv";
 import { adminMiddleware } from "./Router/middleware";
 
@@ -10,8 +12,11 @@ const app = express();
 app.use(express.json());
 
 
-
+// Books Routes
 app.use("/books", booksRouter);
+
+// Register and Login Routes
+app.use("/auth", authRouter);
 
 // Server Health
 app.get('/health', (req, res) => {
@@ -21,6 +26,7 @@ app.get('/health', (req, res) => {
 app.get('/', (req, res)=>{
   res.status(200).send('<h1> Welcome </h1>')
 })
+
 
 // admin routh
 app.use('/admin', adminMiddleware)
@@ -34,5 +40,6 @@ app.get('/admin', (req, res ) =>{
 app.listen(PORT, () => {
   console.log(`Server is running on port http://localhost:${PORT}`);
 });
+
 
 
