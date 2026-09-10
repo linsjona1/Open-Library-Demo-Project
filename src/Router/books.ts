@@ -4,6 +4,7 @@ import { readFile, writeFile } from "../utils/helper";
 import { Book } from "../types";
 import { createBookSchema } from "../schemas/bookSchema";
 import { updateBookSchema } from "../schemas/bookSchema";
+import {authenticate, AuthRequest} from "../middleware/auth"
 
 
 const router = Router();
@@ -13,7 +14,7 @@ const userID = 'fake-userID'
 
 
 // Adding a new book
-router.post("/", async (req, res) => {
+router.post("/", authenticate, async (req: AuthRequest, res) => {
   try {
 
      const result = createBookSchema.safeParse(req.body);
@@ -22,9 +23,6 @@ router.post("/", async (req, res) => {
      }
     const { title, author, genre, filePath } = result.data;
 
-    // if (!title || !author || !filePath) {
-    //   return res.status(400).json({ message: "title, author, and filePath are required" });
-    // }
 
     const newBook: Book = {
       id: crypto.randomUUID(),
@@ -32,7 +30,7 @@ router.post("/", async (req, res) => {
       author,
       genre,
       filePath,
-      userId: userID,
+      userId: req.userId as string,
     };
 
     const books = await readFile(bookFilePath);
@@ -50,10 +48,20 @@ router.post("/", async (req, res) => {
 
 
 // Getting all books
-router.get("/", async (req, res) => {
+// router.get("/", async (req, res) => {
+//   try {
+//     const books = await readFile(bookFilePath);
+//     res.status(200).json(books);
+//   } catch (error) {
+//     res.status(500).json({ message: "Failed to load books" });
+//   }
+// });
+
+router.get("/", authenticate, async (req: AuthRequest, res) => {
   try {
     const books = await readFile(bookFilePath);
-    res.status(200).json(books);
+    const myBooks = books.filter((b: Book) => b.userId === req.userId);
+    res.status(200).json(myBooks);
   } catch (error) {
     res.status(500).json({ message: "Failed to load books" });
   }
@@ -61,18 +69,13 @@ router.get("/", async (req, res) => {
 
 
 //Getting a single book
-router.get("/:id", async (req, res) => {
+router.get("/:id", authenticate, async (req: AuthRequest, res) => {
   try {
     const { id } = req.params;
     
     const books = await readFile(bookFilePath);
-    const theBook= books.find((b: Book) => b.id === id);  // How to find
-    // console.log(theBook);
+    const theBook= books.find((b: Book) => b.id === id && b.userId === req.userId);  // How to find
         
-    
-    
-    
-
     if (!theBook) {
       return res.status(404).json({ message: "Book not found" });
     }
@@ -85,7 +88,7 @@ router.get("/:id", async (req, res) => {
 
 
 // To  edit or modify a book
-router.put("/:id", async (req, res) => {
+router.put("/:id", authenticate, async (req: AuthRequest, res) => {
   try {
     const { id } = req.params;
     const result = updateBookSchema.safeParse(req.body);
@@ -97,7 +100,7 @@ router.put("/:id", async (req, res) => {
     // const bookId = req.body.id;
 
     const books = await readFile(bookFilePath);
-    const index = books.findIndex((b: Book) => b.id === id);
+    const index = books.findIndex((b: Book) => b.id === id && b.userId === req.userId);
 
     if (index === -1) {
       return res.status(404).json({ message: "Book not found" });
@@ -124,11 +127,11 @@ router.put("/:id", async (req, res) => {
 
 
 // Deleting a book
-router.delete("/:id", async (req, res) => {
+router.delete("/:id", authenticate, async (req: AuthRequest, res) => {
   try {
     const { id } = req.params;
     const books = await readFile(bookFilePath);
-    const bookExists = books.some((b: Book) => b.id === id);
+    const bookExists = books.some((b: Book) => b.id === id && b.userId === req.userId);
     const deletedBook = books.find((b:Book)=> b.id === id);
 
     if (!bookExists) {
@@ -139,7 +142,7 @@ router.delete("/:id", async (req, res) => {
     // }
     
 
-    const updatedBooks = books.filter((b: Book) => b.id !== id);
+    const updatedBooks = books.filter((b: Book) => !(b.id === id && b.userId === req.userId));
     await writeFile(bookFilePath, updatedBooks);
     res.status(200).json({ message: `${deletedBook.title} by ${deletedBook.author} has been deleted` });
 

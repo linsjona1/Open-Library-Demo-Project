@@ -1,6 +1,6 @@
 import express from "express";
 import  booksRouter from './Router/books'
-import authRouter from "./Router/auth";
+import authRouter from "./Router/authentication";
 
 import dotenv from "dotenv";
 import { adminMiddleware } from "./Router/middleware";

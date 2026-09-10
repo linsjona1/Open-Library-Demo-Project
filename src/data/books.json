@@ -220,5 +220,53 @@
     "author": "Frank Herbert",
     "filePath": "/uploads/dune.pdf",
     "userId": "fake-userID"
+  },
+  {
+    "id": "b6b12ec6-5c7a-4162-b353-e6b4203bca38",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Classic Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "b7fbeacb-e8e2-4bda-b440-5495dbff5f5b"
+  },
+  {
+    "id": "37bfb48e-2417-4711-b4de-76c85b81cf8b",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy 1",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+  },
+  {
+    "id": "3b5006b1-ec8c-4e57-949e-4fdde60767ed",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy 1",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+  },
+  {
+    "id": "d7128747-c6b6-445e-b6c6-6656afa80df7",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy 1",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+  },
+  {
+    "id": "c2969988-7a32-46ea-8ef9-de52f55364be",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy 1",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+  },
+  {
+    "id": "91af38ea-e9b8-48a3-868c-4e23dde1bf87",
+    "title": "The Hobbit",
+    "author": "J.R.R. Tolkien",
+    "genre": "Fantasy 1",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
   }
 ]

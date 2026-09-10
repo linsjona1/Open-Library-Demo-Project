@@ -13,5 +13,10 @@
     "id": "b7fbeacb-e8e2-4bda-b440-5495dbff5f5b",
     "email": "jonathanehione@gmail.com",
     "passwordHash": "$2b$10$2ZIy.b0n2aDzDklXg33Rpu9B/CnuPsEMHVFHiSZ9jCaWAu1kGDxLi"
+  },
+  {
+    "id": "d57b8911-f6a8-4ff2-909e-57523a38c30b",
+    "email": "seconduser@example.com",
+    "passwordHash": "$2b$10$aPJXOB/./UbO2WKqabOCxeieNKwDUQQBU2bjoXWCFX5FtxwmVrfbi"
   }
 ]
