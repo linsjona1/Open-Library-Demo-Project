@@ -5,6 +5,7 @@ author: string;
 genre?: string;
 filePath: string;
 userId: string;
+isPublic: boolean;
 }
 
 export interface User {

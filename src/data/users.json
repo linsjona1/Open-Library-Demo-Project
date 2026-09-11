@@ -18,5 +18,10 @@
     "id": "d57b8911-f6a8-4ff2-909e-57523a38c30b",
     "email": "seconduser@example.com",
     "passwordHash": "$2b$10$aPJXOB/./UbO2WKqabOCxeieNKwDUQQBU2bjoXWCFX5FtxwmVrfbi"
+  },
+  {
+    "id": "352618a6-ddf9-4c67-8ab7-6946829f4de9",
+    "email": "example@email.com",
+    "passwordHash": "$2b$10$oZsgKzEdjoI.jjjk4oNxu.d3jDln8RtQmQ8ME2cMkACxnNgUqJs4y"
   }
 ]
