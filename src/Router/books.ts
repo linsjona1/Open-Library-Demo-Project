@@ -31,6 +31,7 @@ router.post("/", authenticate, async (req: AuthRequest, res) => {
       genre,
       filePath,
       userId: req.userId as string,
+      isPublic: false,
     };
 
     const books = await readFile(bookFilePath);
@@ -67,6 +68,43 @@ router.get("/", authenticate, async (req: AuthRequest, res) => {
   }
 });
 
+
+// Public books route
+router.get("/public", async (req, res) => {
+  try {
+    const books = await readFile(bookFilePath);
+    const publicBooks = books.filter((b: Book) => b.isPublic === true);
+
+    res.status(200).json(publicBooks);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to load public books" });
+  }
+});
+
+
+// change visibility route
+router.patch("/:id/visibility", authenticate, async (req: AuthRequest, res) => {
+  try {
+    const { id } = req.params;
+
+    const books = await readFile(bookFilePath);
+    const index = books.findIndex((b: Book) => b.id === id && b.userId === req.userId);
+
+    if (index === -1) {
+      return res.status(404).json({ message: "Book not found" });
+    }
+
+    books[index] = {
+      ...books[index],
+      isPublic: !books[index].isPublic,
+    };
+
+    await writeFile(bookFilePath, books);
+    res.status(200).json(books[index]);
+  } catch (error) {
+    res.status(500).json({ message: "Failed to update visibility" });
+  }
+});
 
 //Getting a single book
 router.get("/:id", authenticate, async (req: AuthRequest, res) => {
@@ -116,6 +154,8 @@ router.put("/:id", authenticate, async (req: AuthRequest, res) => {
       author: author ?? books[index].author,
       genre: genre ?? books[index].genre,
       filePath: filePath ?? books[index].filePath,
+      userId: req.userId as string,
+      isPublic: false,
     };
 
     await writeFile (bookFilePath, books);
@@ -150,5 +190,7 @@ router.delete("/:id", authenticate, async (req: AuthRequest, res) => {
     res.status(500).json({ message: "Failed to delete book" });
   }
 });
+
+
 
 export default router;

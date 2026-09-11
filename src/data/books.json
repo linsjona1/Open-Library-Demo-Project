@@ -5,7 +5,8 @@
     "author": "Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-user-1"
+    "userId": "fake-user-1",
+    "isPublic": false
   },
   {
     "id": "4",
@@ -13,7 +14,8 @@
     "author": "Linus JOnathan",
     "genre": "Adventure",
     "filePath": "/uploads/moby-dick.pdf",
-    "userId": "fake-user-1"
+    "userId": "fake-user-1",
+    "isPublic": false
   },
   {
     "id": "5",
@@ -21,7 +23,8 @@
     "author": "Arthur Conan Doyle",
     "genre": "Mystery",
     "filePath": "/uploads/sherlock-holmes.pdf",
-    "userId": "fake-user-2"
+    "userId": "fake-user-2",
+    "isPublic": false
   },
   {
     "id": "7",
@@ -29,7 +32,8 @@
     "author": "Oscar Wilde",
     "genre": "Fiction",
     "filePath": "/uploads/dorian-gray.pdf",
-    "userId": "fake-user-2"
+    "userId": "fake-user-2",
+    "isPublic": false
   },
   {
     "id": "8",
@@ -37,7 +41,8 @@
     "author": "Leo Tolstoy",
     "genre": "Historical Fiction",
     "filePath": "/uploads/war-and-peace.pdf",
-    "userId": "fake-user-1"
+    "userId": "fake-user-1",
+    "isPublic": false
   },
   {
     "id": "9",
@@ -45,7 +50,8 @@
     "author": "H.G. Wells",
     "genre": "Science Fiction",
     "filePath": "/uploads/time-machine.pdf",
-    "userId": "fake-user-2"
+    "userId": "fake-user-2",
+    "isPublic": false
   },
   {
     "id": "10",
@@ -53,7 +59,8 @@
     "author": "Charles Dickens",
     "genre": "Sci-Fi Classic",
     "filePath": "/uploads/great-expectations.pdf",
-    "userId": "fake-user-1"
+    "userId": "fake-user-1",
+    "isPublic": false
   },
   {
     "id": "436aa219-ff16-4465-a078-7338c33e8709",
@@ -61,7 +68,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "ea7c3d6c-c1ef-4023-8a4d-6920f905b46e",
@@ -69,7 +77,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "81338bb0-177c-498c-9d64-3e7a007feb95",
@@ -77,7 +86,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "7a16fb26-7526-40b2-8c1a-c225d79c3cca",
@@ -85,7 +95,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": true
   },
   {
     "id": "e120c462-434b-4465-ae23-4cd9402f5126",
@@ -93,7 +104,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": true
   },
   {
     "id": "250e4cbb-c2a7-446b-be22-02b7be8678fc",
@@ -101,7 +113,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": true
   },
   {
     "id": "fdbb1a47-7abf-42f3-8107-dca6a0ae457f",
@@ -109,7 +122,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "14acc06f-48ad-42b6-aee3-26ddfaff1805",
@@ -117,7 +131,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "a4c862f3-af9a-4e28-bfbf-7f9660595e6b",
@@ -125,7 +140,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "326d6848-c889-4c9c-840f-f521fb3f0ed8",
@@ -133,7 +149,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "9d6a5ac8-6122-409d-8a44-820a096ae28c",
@@ -141,7 +158,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "8631a628-7ff0-4192-9d1f-7bace7703ee6",
@@ -149,7 +167,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "4958df27-397a-4d4b-9ec2-32e191a75149",
@@ -157,7 +176,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "751b6a03-8224-4d95-97c5-d673e6b06399",
@@ -165,7 +185,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "4d328096-8d1d-4c31-a3c9-1b0ff973ff6c",
@@ -173,7 +194,8 @@
     "author": "Lunus Nathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "b04be6eb-5fbb-4b1d-895f-e0fad9fae29d",
@@ -181,7 +203,8 @@
     "author": "Lunus",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "51910c0a-dd94-4fb7-9ba8-4dde5658f90e",
@@ -189,7 +212,8 @@
     "author": "Linus",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "38ec30c3-3098-48a1-9277-fc1950228e95",
@@ -197,7 +221,8 @@
     "author": "linux",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "6",
@@ -205,21 +230,24 @@
     "author": "jonathan",
     "genre": "Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "be378920-0499-4f7d-b119-bf450d919525",
     "title": "Dune",
     "author": "Frank Herbert",
     "filePath": "/uploads/dune.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "b871cdab-33d5-4d22-96ed-3f870a4d7238",
     "title": "Dune",
     "author": "Frank Herbert",
     "filePath": "/uploads/dune.pdf",
-    "userId": "fake-userID"
+    "userId": "fake-userID",
+    "isPublic": false
   },
   {
     "id": "b6b12ec6-5c7a-4162-b353-e6b4203bca38",
@@ -227,7 +255,8 @@
     "author": "J.R.R. Tolkien",
     "genre": "Classic Fantasy",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "b7fbeacb-e8e2-4bda-b440-5495dbff5f5b"
+    "userId": "b7fbeacb-e8e2-4bda-b440-5495dbff5f5b",
+    "isPublic": false
   },
   {
     "id": "37bfb48e-2417-4711-b4de-76c85b81cf8b",
@@ -235,7 +264,8 @@
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy 1",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b",
+    "isPublic": false
   },
   {
     "id": "3b5006b1-ec8c-4e57-949e-4fdde60767ed",
@@ -243,7 +273,8 @@
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy 1",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b",
+    "isPublic": false
   },
   {
     "id": "d7128747-c6b6-445e-b6c6-6656afa80df7",
@@ -251,7 +282,8 @@
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy 1",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b",
+    "isPublic": false
   },
   {
     "id": "c2969988-7a32-46ea-8ef9-de52f55364be",
@@ -259,7 +291,8 @@
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy 1",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b",
+    "isPublic": false
   },
   {
     "id": "91af38ea-e9b8-48a3-868c-4e23dde1bf87",
@@ -267,6 +300,43 @@
     "author": "J.R.R. Tolkien",
     "genre": "Fantasy 1",
     "filePath": "/uploads/hobbit.pdf",
-    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b"
+    "userId": "d57b8911-f6a8-4ff2-909e-57523a38c30b",
+    "isPublic": false
+  },
+  {
+    "id": "e0fc18eb-7ce9-4789-b356-b0b66c827f66",
+    "title": "The Hobbit2",
+    "author": "Lunus Nathan",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "352618a6-ddf9-4c67-8ab7-6946829f4de9",
+    "isPublic": false
+  },
+  {
+    "id": "aac8a794-dbd6-4e9d-a1e1-a7c006eace1c",
+    "title": "The Hobbit2",
+    "author": "Lunus Nathan",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "352618a6-ddf9-4c67-8ab7-6946829f4de9",
+    "isPublic": false
+  },
+  {
+    "id": "4e7982db-70b6-4400-8666-69b660b269c9",
+    "title": "The Hobbit2",
+    "author": "Lunus Nathan",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "352618a6-ddf9-4c67-8ab7-6946829f4de9",
+    "isPublic": false
+  },
+  {
+    "id": "4ad7013b-f2b2-4cf9-9f27-47ca1d711b6c",
+    "title": "The Hobbit2",
+    "author": "Lunus Nathan",
+    "genre": "Fantasy",
+    "filePath": "/uploads/hobbit.pdf",
+    "userId": "352618a6-ddf9-4c67-8ab7-6946829f4de9",
+    "isPublic": true
   }
 ]
