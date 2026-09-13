@@ -338,5 +338,23 @@
     "filePath": "/uploads/hobbit.pdf",
     "userId": "352618a6-ddf9-4c67-8ab7-6946829f4de9",
     "isPublic": true
+  },
+  {
+    "id": "a80861dc-8f59-45e9-9846-d6b01ee95973",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "filePath": "/uploads/brave-new-world.pdf",
+    "userId": "41a27126-746b-4028-a2b6-f72354b27ac5",
+    "isPublic": false
+  },
+  {
+    "id": "740f755d-e431-44ab-985a-b788cb678869",
+    "title": "Brave New World",
+    "author": "Aldous Huxley",
+    "genre": "Dystopian",
+    "filePath": "/uploads/brave-new-world.pdf",
+    "userId": "41a27126-746b-4028-a2b6-f72354b27ac5",
+    "isPublic": true
   }
 ]

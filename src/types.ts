@@ -13,3 +13,8 @@ export interface User {
   email: string;
   passwordHash: string;
 }
+export interface ShelfEntry {
+  id: string;
+  userId: string;
+  bookId: string;
+}

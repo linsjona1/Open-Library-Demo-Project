@@ -23,5 +23,10 @@
     "id": "352618a6-ddf9-4c67-8ab7-6946829f4de9",
     "email": "example@email.com",
     "passwordHash": "$2b$10$oZsgKzEdjoI.jjjk4oNxu.d3jDln8RtQmQ8ME2cMkACxnNgUqJs4y"
+  },
+  {
+    "id": "41a27126-746b-4028-a2b6-f72354b27ac5",
+    "email": "example@gmail.com",
+    "passwordHash": "$2b$10$AF2UkAnAXQ8jqGToM7U76OERcCeWjCAzANQrIAHhr.szCtrAWH0c2"
   }
 ]

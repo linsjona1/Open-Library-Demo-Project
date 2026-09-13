@@ -1,15 +1,17 @@
 import { Router } from "express";
 import crypto from "crypto";
 import { readFile, writeFile } from "../utils/helper";
-import { Book } from "../types";
+import { Book, ShelfEntry } from "../types";
 import { createBookSchema } from "../schemas/bookSchema";
 import { updateBookSchema } from "../schemas/bookSchema";
 import {authenticate, AuthRequest} from "../middleware/auth"
 
 
+
 const router = Router();
 const bookFilePath = 'src/data/books.json';
 const userID = 'fake-userID'
+const shelfFilePath = "src/data/shelfEntries.json";
 
 
 
@@ -61,12 +63,33 @@ router.post("/", authenticate, async (req: AuthRequest, res) => {
 router.get("/", authenticate, async (req: AuthRequest, res) => {
   try {
     const books = await readFile(bookFilePath);
+    const shelfEntries = await readFile(shelfFilePath);
+
     const myBooks = books.filter((b: Book) => b.userId === req.userId);
-    res.status(200).json(myBooks);
+
+    const mySavedEntries = shelfEntries.filter((entry: ShelfEntry) => entry.userId === req.userId);
+    const savedBooks = mySavedEntries
+      .map((entry: ShelfEntry) => books.find((b: Book) => b.id === entry.bookId))
+       .filter((b: Book | undefined): b is Book => b !== undefined);
+
+    res.status(200).json({ myBooks, savedBooks });
   } catch (error) {
     res.status(500).json({ message: "Failed to load books" });
   }
 });
+
+
+
+
+// router.get("/", authenticate, async (req: AuthRequest, res) => {
+//   try {
+//     const books = await readFile(bookFilePath);
+//     const myBooks = books.filter((b: Book) => b.userId === req.userId);
+//     res.status(200).json(myBooks);
+//   } catch (error) {
+//     res.status(500).json({ message: "Failed to load books" });
+//   }
+// });
 
 
 // Public books route
@@ -167,24 +190,52 @@ router.put("/:id", authenticate, async (req: AuthRequest, res) => {
 
 
 // Deleting a book
+// router.delete("/:id", authenticate, async (req: AuthRequest, res) => {
+//   try {
+//     const { id } = req.params;
+//     const books = await readFile(bookFilePath);
+//     const bookExists = books.some((b: Book) => b.id === id && b.userId === req.userId);
+//     const deletedBook = books.find((b:Book)=> b.id === id);
+
+//     if (!bookExists) {
+//       return res.status(404).json({ message: "Book not found" });
+//     }
+//     //  if (id.length === 0){
+
+    
+//     //   return res.status(400).json({message : "please input a valid id"})
+//     // }
+    
+
+//     const updatedBooks = books.filter((b: Book) => !(b.id === id && b.userId === req.userId));
+//     await writeFile(bookFilePath, updatedBooks);
+//     res.status(200).json({ message: `${deletedBook.title} by ${deletedBook.author} has been deleted` });
+
+//   } catch (error) {
+//     res.status(500).json({ message: "Failed to delete book" });
+//   }
+// });
+
+// Deleting a book
 router.delete("/:id", authenticate, async (req: AuthRequest, res) => {
   try {
     const { id } = req.params;
     const books = await readFile(bookFilePath);
     const bookExists = books.some((b: Book) => b.id === id && b.userId === req.userId);
-    const deletedBook = books.find((b:Book)=> b.id === id);
+    const deletedBook = books.find((b: Book) => b.id === id);
 
     if (!bookExists) {
       return res.status(404).json({ message: "Book not found" });
     }
-    //  if (id.length === 0){
-    //   return res.status(400).json({message : "please input a valid id"})
-    // }
-    
 
     const updatedBooks = books.filter((b: Book) => !(b.id === id && b.userId === req.userId));
     await writeFile(bookFilePath, updatedBooks);
-    res.status(200).json({ message: `${deletedBook.title} by ${deletedBook.author} has been deleted` });
+
+    const shelfEntries = await readFile(shelfFilePath);
+    const updatedShelfEntries = shelfEntries.filter((entry: ShelfEntry) => entry.bookId !== id);
+    await writeFile(shelfFilePath, updatedShelfEntries);
+
+    res.status(200).json({ message: `${deletedBook?.title} by ${deletedBook?.author} has been deleted` });
 
   } catch (error) {
     res.status(500).json({ message: "Failed to delete book" });

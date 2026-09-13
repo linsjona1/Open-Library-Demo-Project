@@ -1,6 +1,7 @@
 import express from "express";
 import  booksRouter from './Router/books'
 import authRouter from "./Router/authentication";
+import shelfRouter from "./Router/shelf";
 
 import dotenv from "dotenv";
 import { adminMiddleware } from "./Router/middleware";
@@ -17,6 +18,9 @@ app.use("/books", booksRouter);
 
 // Register and Login Routes
 app.use("/auth", authRouter);
+
+// Shelf Routes
+app.use("/books", shelfRouter);
 
 // Server Health
 app.get('/health', (req, res) => {
